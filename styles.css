@@ -3,12 +3,17 @@
   font-family: Outfit;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   background-color: #022B3A;
   color: #fff;
 }
 
-.main {
+.top {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -16,7 +21,27 @@ body {
   height: 100%;
   padding: 4rem;
 }
-.main h1 {
+.top h1 {
   padding-top: 3rem;
   font-size: 4rem;
+  position: fixed;
+  z-index: -2;
+}
+
+.main {
+  margin-top: 14rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 4rem;
+  background-color: #001d27;
+  border-radius: 4rem;
+  outline: #fff 2px solid;
+}
+.main h2 {
+  border-bottom: 2px solid #fff;
+}
+.main li {
+  list-style: none;
+  font-weight: 500;
+  font-size: 20px;
 }/*# sourceMappingURL=styles.css.map */

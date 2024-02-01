@@ -47,7 +47,10 @@ body {
     background-color: $mbackground-c;
     border-radius: 4rem;
 
+    font-size: 28px;
+
     outline: $white 2px solid;
+    box-shadow: $white 0 0 20px;
 
     h2 {
         border-bottom: 2px solid $white;
@@ -57,5 +60,7 @@ body {
         list-style: none;
         font-weight: 500;
         font-size: 20px;
+
+        padding: 0.4rem;
     }
 }

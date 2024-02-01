@@ -35,7 +35,9 @@ body {
   padding: 4rem;
   background-color: #001d27;
   border-radius: 4rem;
+  font-size: 28px;
   outline: #fff 2px solid;
+  box-shadow: #fff 0 0 20px;
 }
 .main h2 {
   border-bottom: 2px solid #fff;
@@ -44,4 +46,5 @@ body {
   list-style: none;
   font-weight: 500;
   font-size: 20px;
+  padding: 0.4rem;
 }/*# sourceMappingURL=styles.css.map */

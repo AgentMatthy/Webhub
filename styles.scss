@@ -1,0 +1,31 @@
+$background-c: #022B3A;
+$accent-c: #1F7A8C;
+$bright: #BFDBF7;
+$dark: #000;
+$white: #fff;
+$whiten: rgba(255, 255, 255, 0.13);
+$darken: rgba(0, 0, 0, 0.13);
+
+* {
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+body {
+    background-color: $background-c;
+    color: $white;
+}
+
+.main {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+
+    h1 {
+        padding-top: 3rem;
+        font-size: 4rem;
+    }
+}

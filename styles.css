@@ -21,15 +21,40 @@ body {
   height: 100%;
   padding: 4rem;
 }
-.top h1 {
-  padding-top: 3rem;
-  font-size: 4rem;
+.top span {
+  display: flex;
   position: fixed;
+  align-items: center;
+  justify-content: center;
   z-index: -2;
+  padding-top: 3rem;
+}
+.top span h1 {
+  font-size: 4rem;
+  text-wrap: nowrap;
+}
+.top span svg {
+  position: fixed;
+}
+.top span .svg1 {
+  margin-left: -560px;
+  margin-bottom: -65px;
+}
+.top span .svg2 {
+  margin-left: 580px;
+  margin-bottom: 25px;
+}
+.top span .svg3 {
+  margin-left: -140px;
+  margin-bottom: 100px;
+}
+.top span .svg4 {
+  margin-left: 272px;
+  margin-bottom: -85px;
 }
 
 .main {
-  margin-top: 14rem;
+  margin-top: 18rem;
   margin-left: 5rem;
   margin-right: 5rem;
   padding: 4rem;

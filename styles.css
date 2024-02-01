@@ -57,6 +57,7 @@ body {
   margin-top: 18rem;
   margin-left: 5rem;
   margin-right: 5rem;
+  margin-bottom: 5rem;
   padding: 4rem;
   background-color: #001d27;
   border-radius: 4rem;
@@ -72,4 +73,68 @@ body {
   font-weight: 500;
   font-size: 20px;
   padding: 0.4rem;
+}
+
+.tracking-in-expand-fwd {
+  animation: tracking-in-expand-fwd 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  letter-spacing: 0.01px;
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 0.01px;
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.scale-in-center {
+  animation: scale-in-center 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.slide-in-bottom {
+  animation: slide-in-bottom 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 1s both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    overflow: auto;
+  }
+}
+.anim-delay-1 {
+  animation-delay: 100ms;
+}
+
+.anim-delay-2 {
+  animation-delay: 200ms;
+}
+
+.anim-delay-3 {
+  animation-delay: 300ms;
+}
+
+.anim-delay-4 {
+  animation-delay: 400ms;
 }/*# sourceMappingURL=styles.css.map */

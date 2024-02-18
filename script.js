@@ -1,8 +1,10 @@
-var object = document.getElementById('twrdscursor');
+const blob = document.getElementById("blob");
 
-// Add event listener to track mouse movement
-document.addEventListener('mousemove', function(event) {
-    // Get mouse position
-    var height = event.clientX;
-    var width = event.clientX;
-});
+window.onpointermove = event => {
+    const { clientX, clientY } = event;
+
+    blob.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
+    }, { duration: 3000, fill: "forwards" });
+}

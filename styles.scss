@@ -1,5 +1,5 @@
-$background-c: #022B3A;
-$mbackground-c: #001d27;
+$background-c: #000000;
+$mbackground-c: #0C0E0F;
 $accent-c: #1F7A8C;
 $bright: #BFDBF7;
 $dark: #000;
@@ -7,9 +7,42 @@ $white: #fff;
 $whiten: rgba(255, 255, 255, 0.13);
 $darken: rgba(0, 0, 0, 0.13);
 
+$g1: #86DEB7;
+$g2: #ADEEE3;
+$g3: #63B995;
+$bl: #000;
+
 * {
     box-sizing: border-box;
-    font-family: Outfit;
+    font-family: 'Outfit', serif;
+}
+
+#blob {
+    z-index: -5;
+
+    background-color: white;
+    height: 50vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 10s linear infinite;
+    opacity: 0.8;
+    filter: blur(10vmax);
+}
+
+#blur {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -4;
+    backdrop-filter: blur(10vmax);
+    animation: fadein-from-bl 3s ease-in-out;
 }
 
 a {
@@ -35,12 +68,12 @@ body {
         position: fixed;
         align-items: center;
         justify-content: center;
-        z-index: -2;
+        z-index: -1;
         padding-top: 3rem;
         
         h1 {
             font-size: 4rem;
-            text-wrap: nowrap;
+            text-wrap: none;
         }
         
         svg {
@@ -69,6 +102,8 @@ body {
 }
 
 .main {
+    z-index: 100;
+
     margin-top: 18rem;
     margin-left: 5rem;
     margin-right: 5rem;
@@ -93,6 +128,7 @@ body {
         font-size: 20px;
 
         padding: 0.4rem;
+        animation: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 }
 
@@ -115,11 +151,33 @@ body {
 
 
 
+@keyframes fadein-from-bl {
+    from {
+        background-color: rgba(0, 0, 0, 1);
+    }
 
+    33% {
+        background-color: rgba(0, 0, 0, 1);
+    }
 
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
 
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
 
+    50% {
+        scale: 1.7 1.1;
+    }
 
+    to {
+        rotate: 360deg;
+    }
+}
 
 .tracking-in-expand-fwd {
 	animation: tracking-in-expand-fwd 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;

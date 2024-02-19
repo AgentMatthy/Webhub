@@ -95,22 +95,22 @@ body {
 .main h2 {
   border-bottom: 2px solid #fff;
 }
-.main li {
+.main div {
+  display: flex;
+}
+.main div li {
   list-style: none;
   font-weight: 500;
   font-size: 20px;
+  border-bottom: rgba(255, 255, 255, 0) solid 2px;
   padding: 0.4rem;
-  animation: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.main li:after {
-  content: "";
-  position: relative;
-  background-color: #fff;
-  height: 2px;
-  width: 5px;
-  top: 0;
-  left: 0;
+.main div li:hover {
+  border-bottom: rgb(255, 255, 255) solid 2px;
+  transform: scale(1.07);
 }
+
 .topicon {
   position: absolute;
   font-size: 16px;
@@ -119,6 +119,29 @@ body {
   top: 60px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.anim-link2 {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.anim-link2::after {
+  content: "asd";
+  border-radius: 5px;
+  position: absolute;
+  background-color: #fff;
+  width: 0;
+  height: 5px;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.anim-link2:hover::after {
+  width: calc(100% - 10px);
+  left: 5px;
 }
 
 @keyframes fadein-from-bl {

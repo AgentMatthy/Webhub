@@ -126,28 +126,27 @@ body {
         border-bottom: 2px solid $white;
     }
 
-    li {
-        list-style: none;
-        font-weight: 500;
-        font-size: 20px;
+    div {
+        display: flex;
 
-        padding: 0.4rem;
-        animation: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        li {
+            list-style: none;
+            font-weight: 500;
+            font-size: 20px;
 
-        &:after {
-            content: "";
-            position: relative;
-            background-color: $white;
-            height: 2px;
-            width: 5px;
-            top: 0;
-            left: 0;
-        }
+            border-bottom: rgba(255, 255, 255, 0) solid 2px;
 
-        &:hover {
+            padding: 0.4rem;
+            transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
+            &:hover {
+                border-bottom: rgba(255, 255, 255, 1) solid 2px;
+//                margin-left: 3px;
+                transform: scale(1.07);
+            }
         }
     }
+
 }
 
 .topicon {
@@ -160,6 +159,28 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.anim-link2 {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.anim-link2::after {
+    content: "asd";
+    border-radius: 5px;
+    position: absolute;
+    background-color: $white;
+    width: 0;
+    height: 5px;
+    left: 50%;
+    bottom: 0;
+    transition: all .3s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.anim-link2:hover::after {
+    width: calc(100% - 10px);
+    left: 5px;
+}
 
 
 

@@ -5,7 +5,6 @@
 
 #blob {
   z-index: -5;
-  background-color: white;
   height: 80vmax;
   aspect-ratio: 1;
   position: fixed;
@@ -13,7 +12,7 @@
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, mediumpurple);
+  background: linear-gradient(to right, #63B995, #397367);
   animation: rotate 10s linear infinite;
   opacity: 0.8;
   filter: blur(12vmax);
@@ -84,17 +83,14 @@ body {
 
 .main {
   z-index: 100;
-  mix-blend-mode: soft-light;
-  margin-top: 18rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-bottom: 5rem;
+  opacity: 0.7;
+  backdrop-filter: blur(5px);
+  mix-blend-mode: hard-light;
+  margin: 18rem 5rem 5rem;
   padding: 4rem 4rem 4rem 4rem;
-  background-color: #0C0E0F;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 4rem;
   font-size: 28px;
-  outline: #fff 2px solid;
-  box-shadow: #fff 0 0 20px;
 }
 .main h2 {
   border-bottom: 2px solid #fff;
@@ -106,7 +102,15 @@ body {
   padding: 0.4rem;
   animation: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
+.main li:after {
+  content: "";
+  position: relative;
+  background-color: #fff;
+  height: 2px;
+  width: 5px;
+  top: 0;
+  left: 0;
+}
 .topicon {
   position: absolute;
   font-size: 16px;
@@ -119,11 +123,11 @@ body {
 
 @keyframes fadein-from-bl {
   from {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2vmax);
   }
   33% {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2vmax);
   }
   to {
@@ -186,7 +190,7 @@ body {
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0.7;
     overflow: auto;
   }
 }

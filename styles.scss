@@ -7,10 +7,11 @@ $white: #fff;
 $whiten: rgba(255, 255, 255, 0.13);
 $darken: rgba(0, 0, 0, 0.13);
 
-$g1: #86DEB7;
-$g2: #ADEEE3;
+$g1: #63CCCA;
+$g2: #397367;
 $g3: #63B995;
-$bl: #000;
+
+$main-opacity: 0.7;
 
 * {
     box-sizing: border-box;
@@ -20,7 +21,6 @@ $bl: #000;
 #blob {
     z-index: -5;
 
-    background-color: white;
     height: 80vmax;
     aspect-ratio: 1;
     position: fixed;
@@ -28,7 +28,7 @@ $bl: #000;
     top: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, mediumpurple);
+    background: linear-gradient(to right, $g3, $g2);
     animation: rotate 10s linear infinite;
     opacity: 0.8;
     filter: blur(12vmax);
@@ -107,21 +107,20 @@ body {
 .main {
     z-index: 100;
 
-    mix-blend-mode: soft-light;
+    opacity: $main-opacity;
+    backdrop-filter: blur(5px);
+    mix-blend-mode: hard-light;
 
-    margin-top: 18rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
+    margin: 18rem 5rem 5rem;
     padding: 4rem 4rem 4rem 4rem;
 
-    background-color: $mbackground-c;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 4rem;
 
     font-size: 28px;
 
-    outline: $white 2px solid;
-    box-shadow: $white 0 0 20px;
+//    outline: $white 2px solid;
+//    box-shadow: $white 0 0 20px;
 
     h2 {
         border-bottom: 2px solid $white;
@@ -134,6 +133,20 @@ body {
 
         padding: 0.4rem;
         animation: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &:after {
+            content: "";
+            position: relative;
+            background-color: $white;
+            height: 2px;
+            width: 5px;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover {
+
+        }
     }
 }
 
@@ -158,12 +171,12 @@ body {
 
 @keyframes fadein-from-bl {
     from {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(2vmax);
     }
 
     33% {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(2vmax);
     }
 
@@ -233,7 +246,7 @@ body {
     }
     100% {
       transform: translateY(0);
-      opacity: 1;
+      opacity: $main-opacity;
       overflow: auto;
     }
 }

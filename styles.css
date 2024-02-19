@@ -95,10 +95,10 @@ body {
 .main h2 {
   border-bottom: 2px solid #fff;
 }
-.main div {
+.main .links div {
   display: flex;
 }
-.main div li {
+.main .links div li {
   list-style: none;
   font-weight: 500;
   font-size: 2rem;
@@ -106,7 +106,25 @@ body {
   padding: 0.4rem;
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.main div li:hover {
+.main .links div li:hover {
+  border-bottom: rgb(255, 255, 255) solid 2px;
+  transform: scale(1.07);
+}
+
+.contacts span {
+  display: flex;
+  flex: 1;
+}
+.contacts span li {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+  font-size: 2rem;
+  border-bottom: rgba(255, 255, 255, 0) solid 2px;
+  padding: 0.4rem;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.contacts span li:hover {
   border-bottom: rgb(255, 255, 255) solid 2px;
   transform: scale(1.07);
 }

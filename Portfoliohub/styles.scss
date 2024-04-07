@@ -3,10 +3,24 @@ $dark: black;
 
 $c-bg: #000;
 $c-txt: $light;
+$c-disabled: gray;
 $c-accent: #f00;
 
 body {
     background: $c-bg;
     color: $c-txt;
-    font-family: Jost;
+    font-family: Jost, serif;
+
+    padding: 10vh 15vw;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    color: $c-disabled;
 }

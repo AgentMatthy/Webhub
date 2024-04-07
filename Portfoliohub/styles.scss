@@ -4,3 +4,9 @@ $dark: black;
 $c-bg: #000;
 $c-txt: $light;
 $c-accent: #f00;
+
+body {
+    background: $c-bg;
+    color: $c-txt;
+    font-family: Jost;
+}

@@ -32,6 +32,8 @@ h3 {
 }
 
 .initial-window {
+    z-index: 1;
+
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -45,5 +47,19 @@ h3 {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+}
+
+.blobs {
+    z-index: 0;
+
+    #screen {
+        z-index: -1;
+
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+
+        backdrop-filter: blur(20px);
     }
 }

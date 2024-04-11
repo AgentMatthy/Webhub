@@ -38,15 +38,61 @@ h3 {
   justify-content: flex-end;
 }
 
-.blobs {
-  z-index: 0;
-}
-.blobs #screen {
+#screen {
   z-index: -1;
   position: absolute;
   height: 100vh;
   width: 100vw;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(100px);
+}
+
+.blobs {
+  z-index: 0;
+}
+.blobs #blob1 {
+  z-index: -2;
+  filter: blur(100px);
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  top: calc(50vh - 10rem);
+  left: calc(50vw - 10rem);
+  background: cyan;
+  border-radius: 100%;
+  translate: 0 -35vh;
+}
+.blobs #blob2 {
+  z-index: -2;
+  filter: blur(100px);
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  top: calc(50vh - 10rem);
+  left: calc(50vw - 10rem);
+  background: lightcyan;
+  border-radius: 100%;
+  translate: 35vh 35px;
+}
+.blobs #blob3 {
+  z-index: -2;
+  filter: blur(100px);
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  top: calc(50vh - 10rem);
+  left: calc(50vw - 10rem);
+  background: darkcyan;
+  border-radius: 100%;
+  translate: -35vh 35px;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

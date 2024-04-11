@@ -50,16 +50,74 @@ h3 {
     }
 }
 
+#screen {
+    z-index: -1;
+
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    backdrop-filter: blur(100px);
+}
+
 .blobs {
     z-index: 0;
+    $tri-distance: 35;
+//    overflow: auto;
 
-    #screen {
-        z-index: -1;
+    #blob1 {
+        z-index: -2;
+        filter: blur(100px);
 
         position: absolute;
-        height: 100vh;
-        width: 100vw;
+        height: 20rem;
+        width: 20rem;
+        top: calc(50vh - 10rem);
+        left: calc(50vw - 10rem);
+        background: cyan;
+        border-radius: 100%;
 
-        backdrop-filter: blur(20px);
+        translate: 0 calc(1vh * $tri-distance * -1);
+    }
+
+    #blob2 {
+        z-index: -2;
+        filter: blur(100px);
+
+        position: absolute;
+        height: 20rem;
+        width: 20rem;
+        top: calc(50vh - 10rem);
+        left: calc(50vw - 10rem);
+        background: lightcyan;
+        border-radius: 100%;
+
+        translate: calc(1vh * sqrt($tri-distance * $tri-distance)) calc(1px * sqrt($tri-distance * $tri-distance));
+    }
+
+    #blob3 {
+        z-index: -2;
+        filter: blur(100px);
+
+        position: absolute;
+        height: 20rem;
+        width: 20rem;
+        top: calc(50vh - 10rem);
+        left: calc(50vw - 10rem);
+        background: darkcyan;
+        border-radius: 100%;
+
+        translate: calc(-1 * 1vh * sqrt($tri-distance * $tri-distance)) calc(1px * sqrt($tri-distance * $tri-distance));
+    }
+
+//    animation: rotating infinite 5s linear;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

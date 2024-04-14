@@ -52,18 +52,20 @@ h3 {
 .blobs #blob1 {
   z-index: -2;
   filter: blur(100px);
+  overflow: hidden;
   position: absolute;
   height: 20rem;
   width: 20rem;
   top: calc(50vh - 10rem);
-  left: calc(50vw - 10rem);
+  left: calc(50vw - 10rem - 30vw);
   background: cyan;
   border-radius: 100%;
-  translate: 0 -35vh;
+  animation: moveupdown infinite 2s ease-out 0ms;
 }
 .blobs #blob2 {
   z-index: -2;
   filter: blur(100px);
+  overflow: hidden;
   position: absolute;
   height: 20rem;
   width: 20rem;
@@ -71,27 +73,42 @@ h3 {
   left: calc(50vw - 10rem);
   background: lightcyan;
   border-radius: 100%;
-  translate: 35vh 35px;
+  animation: moveupdown infinite 2s ease-out 300ms;
 }
 .blobs #blob3 {
   z-index: -2;
   filter: blur(100px);
+  overflow: hidden;
   position: absolute;
   height: 20rem;
   width: 20rem;
   top: calc(50vh - 10rem);
-  left: calc(50vw - 10rem);
+  left: calc(50vw - 10rem + 30vw);
   background: darkcyan;
   border-radius: 100%;
-  translate: -35vh 35px;
+  animation: moveupdown infinite 2s ease-out 600ms;
 }
 
-@keyframes rotating {
+@keyframes moveupdown {
   from {
-    transform: rotate(0deg);
+    transform: translate(0, -20vh);
+  }
+  50% {
+    transform: translate(0, 20vh);
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(0, -20vh);
+  }
+}
+@keyframes movedownup {
+  from {
+    transform: translate(0, 20vh);
+  }
+  50% {
+    transform: translate(0, -20vh);
+  }
+  to {
+    transform: translate(0, 20vh);
   }
 }
 

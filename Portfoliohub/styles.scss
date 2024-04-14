@@ -62,27 +62,27 @@ h3 {
 
 .blobs {
     z-index: 0;
-    $tri-distance: 35;
-//    overflow: auto;
 
     #blob1 {
         z-index: -2;
         filter: blur(100px);
+        overflow: hidden;
 
         position: absolute;
         height: 20rem;
         width: 20rem;
         top: calc(50vh - 10rem);
-        left: calc(50vw - 10rem);
+        left: calc(50vw - 10rem - 30vw);
         background: cyan;
         border-radius: 100%;
 
-        translate: 0 calc(1vh * $tri-distance * -1);
+        animation: moveupdown infinite 2s ease-out 0ms;
     }
 
     #blob2 {
         z-index: -2;
         filter: blur(100px);
+        overflow: hidden;
 
         position: absolute;
         height: 20rem;
@@ -92,32 +92,53 @@ h3 {
         background: lightcyan;
         border-radius: 100%;
 
-        translate: calc(1vh * sqrt($tri-distance * $tri-distance)) calc(1px * sqrt($tri-distance * $tri-distance));
+        animation: moveupdown infinite 2s ease-out 300ms;
     }
 
     #blob3 {
         z-index: -2;
         filter: blur(100px);
+        overflow: hidden;
 
         position: absolute;
         height: 20rem;
         width: 20rem;
         top: calc(50vh - 10rem);
-        left: calc(50vw - 10rem);
+        left: calc(50vw - 10rem + 30vw);
         background: darkcyan;
         border-radius: 100%;
 
-        translate: calc(-1 * 1vh * sqrt($tri-distance * $tri-distance)) calc(1px * sqrt($tri-distance * $tri-distance));
+        animation: moveupdown infinite 2s ease-out 600ms;
     }
 
-//    animation: rotating infinite 5s linear;
 }
 
-@keyframes rotating {
+$blobmove: 20vh;
+
+@keyframes moveupdown {
     from {
-        transform: rotate(0deg);
+        transform: translate(0, -$blobmove);
     }
+
+    50% {
+        transform: translate(0, $blobmove);
+    }
+
     to {
-        transform: rotate(360deg);
+        transform: translate(0, -$blobmove);
+    }
+}
+
+@keyframes movedownup {
+    from {
+        transform: translate(0, $blobmove);
+    }
+
+    50% {
+        transform: translate(0, -$blobmove);
+    }
+
+    to {
+        transform: translate(0, $blobmove);
     }
 }

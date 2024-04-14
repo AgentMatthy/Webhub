@@ -2,12 +2,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
 body {
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  overflow-x: hidden;
   background: #000;
   color: white;
   font-family: Jost, serif;
   padding: 0;
   margin: 0;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 h1 {
@@ -22,7 +34,7 @@ h3 {
   color: gray;
 }
 
-.initial-window {
+.s1 {
   z-index: 1;
   margin: 0;
   height: 100vh;
@@ -32,7 +44,7 @@ h3 {
   grid-template-columns: auto;
   grid-template-rows: auto auto;
 }
-.initial-window .bottom {
+.s1 .bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -41,7 +53,7 @@ h3 {
 #screen {
   z-index: -1;
   background: transparent;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   backdrop-filter: blur(100px);
@@ -55,7 +67,7 @@ h3 {
   z-index: -2;
   filter: blur(100px);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   height: 20rem;
   width: 20rem;
   top: calc(50vh - 10rem);
@@ -68,7 +80,7 @@ h3 {
   z-index: -2;
   filter: blur(100px);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   height: 20rem;
   width: 20rem;
   top: calc(50vh - 10rem);
@@ -81,7 +93,7 @@ h3 {
   z-index: -2;
   filter: blur(100px);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   height: 20rem;
   width: 20rem;
   top: calc(50vh - 10rem);
@@ -92,6 +104,7 @@ h3 {
 }
 
 .s2 {
+  backdrop-filter: grayscale(100%) brightness(60%) contrast(90%);
   z-index: 1;
   margin: 0;
   height: 100vh;

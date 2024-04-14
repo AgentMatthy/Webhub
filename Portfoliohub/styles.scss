@@ -52,12 +52,15 @@ h3 {
 
 #screen {
     z-index: -1;
+    background: transparent;
 
     position: absolute;
     height: 100vh;
     width: 100vw;
 
     backdrop-filter: blur(100px);
+
+    animation: screen-open 1.9s ease-in;
 }
 
 .blobs {
@@ -113,6 +116,21 @@ h3 {
 
 }
 
+.s2 {
+    z-index: 1;
+
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 5vw;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+/////////////////////////////////////////////////////
+
 $blobmove: 20vh;
 
 @keyframes moveupdown {
@@ -140,5 +158,19 @@ $blobmove: 20vh;
 
     to {
         transform: translate(0, $blobmove);
+    }
+}
+
+@keyframes screen-open {
+    from {
+        background: rgba(0, 0, 0, 1);
+    }
+
+    50% {
+        background: rgba(0, 0, 0, 1);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0);
     }
 }

@@ -40,6 +40,22 @@ h3 {
   color: gray;
 }
 
+h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  color: gray;
+}
+
+p {
+  border-left: solid gray 2px;
+  padding-left: 3vw;
+  font-size: 1.5rem;
+}
+p .accent {
+  color: #0FA3B1;
+}
+
 .s1 {
   z-index: 1;
   margin: 0;

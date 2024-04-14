@@ -4,7 +4,7 @@ $dark: black;
 $c-bg: #000;
 $c-txt: $light;
 $c-disabled: gray;
-$c-accent: #f00;
+$c-accent: #0FA3B1;
 
 $blob1: #A26769;
 $blob2: #6BAB90;
@@ -54,6 +54,24 @@ h3 {
     font-size: 2rem;
     margin: 0;
     color: $c-disabled;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    color: $c-disabled;
+}
+
+p {
+    border-left: solid $c-disabled 2px;
+    padding-left: 3vw;
+
+    font-size: 1.5rem;
+
+    .accent {
+        color: $c-accent;
+    }
 }
 
 .s1 {

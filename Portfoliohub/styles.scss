@@ -6,6 +6,10 @@ $c-txt: $light;
 $c-disabled: gray;
 $c-accent: #f00;
 
+$blob1: #A26769;
+$blob2: #6BAB90;
+$blob3: #0FA3B1;
+
 * {
     box-sizing: border-box;
 }
@@ -36,6 +40,12 @@ section {
 
 h1 {
     font-size: 6rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+h2 {
+    font-size: 5rem;
     font-weight: 600;
     margin: 0;
 }
@@ -91,7 +101,7 @@ h3 {
         width: 20rem;
         top: calc(50vh - 10rem);
         left: calc(50vw - 10rem - 30vw);
-        background: cyan;
+        background: $blob1;
         border-radius: 100%;
 
         animation: moveupdown infinite 2s ease-out 0ms;
@@ -107,7 +117,7 @@ h3 {
         width: 20rem;
         top: calc(50vh - 10rem);
         left: calc(50vw - 10rem);
-        background: lightcyan;
+        background: $blob2;
         border-radius: 100%;
 
         animation: moveupdown infinite 2s ease-out 300ms;
@@ -123,7 +133,7 @@ h3 {
         width: 20rem;
         top: calc(50vh - 10rem);
         left: calc(50vw - 10rem + 30vw);
-        background: darkcyan;
+        background: $blob3;
         border-radius: 100%;
 
         animation: moveupdown infinite 2s ease-out 600ms;
@@ -144,6 +154,12 @@ h3 {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 
 /////////////////////////////////////////////////////

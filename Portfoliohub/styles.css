@@ -27,18 +27,21 @@ h1 {
   font-size: 6rem;
   font-weight: 600;
   margin: 0;
+  animation: fadein1 0.5s ease;
 }
 
 h2 {
   font-size: 5rem;
   font-weight: 600;
   margin: 0;
+  animation: fadein1 0.5s ease;
 }
 
 h3 {
   font-size: 2rem;
   margin: 0;
   color: gray;
+  animation: fadein2 1s ease;
 }
 
 h4 {
@@ -192,6 +195,25 @@ p .accent {
   }
   to {
     background: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes fadein1 {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+    translate: 0 5vh;
+  }
+}
+@keyframes fadein2 {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+    translate: 0 5vh;
+  }
+  50% {
+    filter: blur(10px);
+    opacity: 0;
+    translate: 0 5vh;
   }
 }
 

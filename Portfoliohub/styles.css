@@ -164,6 +164,23 @@ p .accent {
   justify-content: flex-end;
 }
 
+.s4 {
+  backdrop-filter: sepia(70%);
+  z-index: 1;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+.s4 .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 @keyframes moveupdown {
   from {
     transform: translate(0, -20vh);

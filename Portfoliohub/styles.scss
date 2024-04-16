@@ -208,6 +208,27 @@ p {
     }
 }
 
+.s4 {
+    backdrop-filter: sepia(70%);
+
+    z-index: 1;
+
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 5vw;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
 /////////////////////////////////////////////////////
 
 $blobmove: 20vh;

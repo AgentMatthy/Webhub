@@ -69,7 +69,7 @@ h4 {
     color: $c-disabled;
 }
 
-p {
+p .text {
     border-left: solid $c-disabled 2px;
     padding-left: 3vw;
 
@@ -226,6 +226,23 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+
+    .c1 {
+        mix-blend-mode: soft-light;
+        width: 20vw;
+        height: 45vh;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        outline: white 2px solid;
+
+        padding: 2vw;
     }
 }
 

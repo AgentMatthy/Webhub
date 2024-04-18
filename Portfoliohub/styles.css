@@ -51,12 +51,12 @@ h4 {
   color: gray;
 }
 
-p {
+p .text {
   border-left: solid gray 2px;
   padding-left: 3vw;
   font-size: 1.5rem;
 }
-p .accent {
+p .text .accent {
   color: #0FA3B1;
 }
 
@@ -179,6 +179,21 @@ p .accent {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+.cards .c1 {
+  mix-blend-mode: soft-light;
+  width: 20vw;
+  height: 45vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  outline: white 2px solid;
+  padding: 2vw;
 }
 
 @keyframes moveupdown {
